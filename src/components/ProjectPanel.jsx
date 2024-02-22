@@ -1,4 +1,4 @@
-import AddProject from "./AddProject";
+import AddProjectButton from "./AddProjectButton";
 
 export default function ProjectPanel(){
     return(
@@ -6,7 +6,7 @@ export default function ProjectPanel(){
             <ol className="mt-12 text-2xl text font-bold text-white text-center">YOUR PROJECTS 
             </ol>
             <div className="flex justify-center mt-6">
-                <AddProject/>
+                
             </div>
         </div>
     )
