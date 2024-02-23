@@ -4,12 +4,13 @@ import AddProjectPanel from "./components/AddProjectPanel";
 import { useState } from "react";
 
 function App() {
-  const [buttonClick, setButtonClick] = useState(false)
+  const [saveClick, setSaveClick] = useState(false)
+  const [projectArr, setProjectArr] = useState([])
   return (
     <>
-      <ProjectPanel />
-      <AddProjectButton setButtonClick={setButtonClick}/>
-      <AddProjectPanel buttonClick={buttonClick} />
+      <ProjectPanel projectArr={projectArr}/>
+      <AddProjectButton setSaveClick={setSaveClick}/>
+      <AddProjectPanel saveClick={saveClick} setSaveClick={setSaveClick} projectArr={projectArr} setProjectArr={setProjectArr}/>
     </>
   );
 }
