@@ -2,7 +2,7 @@ import { useState } from "react";
 import AddProjectButton from "./AddProjectButton";
 import ProjectDetailPanel from "./ProjectDetailsPanel";
 
-export default function ProjectPanel({ projectArr }) {
+export default function ProjectPanel({ projectArr, setProjectArr }) {
   const [projectClick, setProjectClick] = useState(false);
 
   function handleClick() {
@@ -30,7 +30,7 @@ export default function ProjectPanel({ projectArr }) {
       </div>
 
       {projectClick && (
-        <ProjectDetailPanel projectArr={projectArr}/>
+        <ProjectDetailPanel projectArr={projectArr} setProjectArr={setProjectArr}/>
       )}
     </>
   );

@@ -8,7 +8,7 @@ function App() {
   const [projectArr, setProjectArr] = useState([])
   return (
     <>
-      <ProjectPanel projectArr={projectArr}/>
+      <ProjectPanel projectArr={projectArr} setProjectArr={setProjectArr}/>
       <AddProjectButton setSaveClick={setSaveClick}/>
       <AddProjectPanel saveClick={saveClick} setSaveClick={setSaveClick} projectArr={projectArr} setProjectArr={setProjectArr}/>
     </>
